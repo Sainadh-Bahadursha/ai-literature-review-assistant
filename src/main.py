@@ -14,8 +14,10 @@ logger = logging.getLogger(__name__)
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+
     logger.info("Application starting...")
     logger.info("Application version: %s", settings.app_version)
+    logger.info("Environment: %s", settings.environment)
 
     yield
 
@@ -32,10 +34,14 @@ app = FastAPI(
 
 @app.get("/health")
 def health_check():
+
+    logger.debug("Debug message: health endpoint called")
+
     logger.info("Health check requested")
 
     return {
         "status": "healthy",
         "application": settings.app_name,
         "version": settings.app_version,
+        "environment": settings.environment,
     }
