@@ -294,3 +294,11 @@ class PaperElement(Base):
             name="uq_paper_element_number",
         ),
     )
+
+if __name__ == "__main__":
+    from src.database.base import Base
+
+    print("Registered tables:")
+
+    for table in Base.metadata.tables.values():
+        print(f"- {table.name}")

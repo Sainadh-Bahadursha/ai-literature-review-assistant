@@ -84,3 +84,16 @@ def get_public_url(
     return supabase.storage.from_(bucket_name).get_public_url(
         storage_path
     )
+
+if __name__ == "__main__":
+
+    local_file = "data/test_pdfs/sample.pdf"
+
+    storage_path = upload_file(
+        bucket_name="papers",
+        file_path=local_file,
+        storage_path="test/sample_1.pdf",
+    )
+
+    print("Upload successful!")
+    print("Storage path:", storage_path)
