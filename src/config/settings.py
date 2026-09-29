@@ -32,3 +32,10 @@ class Settings(BaseSettings):
 
 
 settings = Settings()
+
+
+# if __name__ == "__main__":
+#     print("Application Name:", settings.app_name)
+#     print("Version:", settings.app_version)
+#     print("Environment:", settings.environment)
+#     print("Debug:", settings.debug)

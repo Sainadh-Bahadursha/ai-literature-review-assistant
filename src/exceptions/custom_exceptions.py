@@ -22,3 +22,11 @@ class DuplicatePaperException(ApplicationException):
     """Raised when a duplicate research paper is uploaded."""
 
     pass
+
+# if __name__ == "__main__":
+#     try:
+#         raise DuplicatePaperException(
+#             "This paper already exists."
+#         )
+#     except ApplicationException as e:
+#         print("Caught:", e)

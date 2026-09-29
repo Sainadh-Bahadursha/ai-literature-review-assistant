@@ -254,3 +254,14 @@ def setup_logging():
         "Logging initialized | environment=%s",
         environment,
     )
+
+
+# if __name__ == "__main__":
+#     setup_logging()
+
+#     test_logger = logging.getLogger("demo")
+
+#     test_logger.debug("This is a DEBUG message")
+#     test_logger.info("This is an INFO message")
+#     test_logger.warning("This is a WARNING message")
+#     test_logger.error("This is an ERROR message")
