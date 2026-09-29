@@ -12,6 +12,10 @@ class Settings(BaseSettings):
     # Database
     database_url: str = ""
 
+    # Storage
+    supabase_url: str = ""
+    supabase_secret_key: str = ""
+
     # LLM
     llm_api_key: str = ""
 
